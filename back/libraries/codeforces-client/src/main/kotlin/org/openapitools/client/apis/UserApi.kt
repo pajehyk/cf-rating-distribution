@@ -19,7 +19,7 @@ import java.io.IOException
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl
 
-import org.openapitools.client.models.User
+import org.openapitools.client.models.UserRatedListResponse
 
 import com.squareup.moshi.Json
 
@@ -51,7 +51,7 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
      * @param activeOnly Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. (optional)
      * @param includeRetired Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. (optional)
      * @param contestId Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status (optional)
-     * @return User
+     * @return UserRatedListResponse
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      * @throws UnsupportedOperationException If the API returns an informational or redirection response
@@ -60,11 +60,11 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userRatedListGet(activeOnly: kotlin.Boolean? = null, includeRetired: kotlin.Boolean? = null, contestId: kotlin.Int? = null) : User {
+    fun userRatedListGet(activeOnly: kotlin.Boolean? = null, includeRetired: kotlin.Boolean? = null, contestId: kotlin.Int? = null) : UserRatedListResponse {
         val localVarResponse = userRatedListGetWithHttpInfo(activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> (localVarResponse as Success<*>).data as User
+            ResponseType.Success -> (localVarResponse as Success<*>).data as UserRatedListResponse
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {
@@ -84,16 +84,16 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
      * @param activeOnly Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. (optional)
      * @param includeRetired Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. (optional)
      * @param contestId Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status (optional)
-     * @return ApiResponse<User?>
+     * @return ApiResponse<UserRatedListResponse?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userRatedListGetWithHttpInfo(activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : ApiResponse<User?> {
+    fun userRatedListGetWithHttpInfo(activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : ApiResponse<UserRatedListResponse?> {
         val localVariableConfig = userRatedListGetRequestConfig(activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
 
-        return request<Unit, User>(
+        return request<Unit, UserRatedListResponse>(
             localVariableConfig
         )
     }

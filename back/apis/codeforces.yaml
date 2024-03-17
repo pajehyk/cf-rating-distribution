@@ -45,10 +45,20 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                type: array
+                $ref: '#/components/schemas/UserRatedListResponse'
 
 components:
   schemas:
+    UserRatedListResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        result:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
     User:
       type: object
       required:

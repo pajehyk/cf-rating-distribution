@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="userRatedListGet"></a>
 # **userRatedListGet**
-> User userRatedListGet(activeOnly, includeRetired, contestId)
+> UserRatedListResponse userRatedListGet(activeOnly, includeRetired, contestId)
 
 Get users information
 
@@ -26,7 +26,7 @@ val activeOnly : kotlin.Boolean = true // kotlin.Boolean | Boolean. If true then
 val includeRetired : kotlin.Boolean = true // kotlin.Boolean | Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month.
 val contestId : kotlin.Int = 56 // kotlin.Int | Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status
 try {
-    val result : User = apiInstance.userRatedListGet(activeOnly, includeRetired, contestId)
+    val result : UserRatedListResponse = apiInstance.userRatedListGet(activeOnly, includeRetired, contestId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UserApi#userRatedListGet")
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserRatedListResponse**](UserRatedListResponse.md)
 
 ### Authorization
 

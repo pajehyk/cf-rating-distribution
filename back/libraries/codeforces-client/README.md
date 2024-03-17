@@ -52,6 +52,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [org.openapitools.client.models.User](docs/User.md)
+ - [org.openapitools.client.models.UserRatedListResponse](docs/UserRatedListResponse.md)
 
 
 <a id="documentation-for-authorization"></a>
