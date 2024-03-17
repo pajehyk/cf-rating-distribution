@@ -1,0 +1,100 @@
+.main-container {
+    width: 100%;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-family: Outfit;
+}
+
+.title-container {
+    color: rgba(0, 0, 0, 1);
+    width: 100%;
+    height: auto;
+    position: static;
+    font-size: 32px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Outfit;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.cf-distribution {
+    width: 100%;
+}
+
+.cf-distribution__histogram {
+    display: block;
+    margin: auto;
+}
+
+.cf-handle-div {
+    width: 100%;
+    margin-top: 3%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+.cf-handle__text-input {
+    height: 30px;
+    margin-top: 1%;
+    color: rgba(45, 45, 45, 1);
+    font-family: Poppins;
+    font-weight: 400;
+    border-color: rgba(208, 208, 208, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.cf-handle__message {
+    color: rgba(0, 0, 0, 1);
+    width: 436px;
+    height: auto;
+    position: static;
+    font-size: 16px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Outfit;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+}
+
+.cf-handle_button_submit-text {
+    color: rgba(255, 255, 255, 1);
+    height: auto;
+    position: absolute;
+    text-align: center;
+    line-height: 32px;
+}
+
+/* CSS from https://getcssscan.com/css-buttons-examples*/
+.cf-handle__button {
+    margin-top: 1%;
+    height: 30px;
+    appearance: none;
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    box-sizing: border-box;
+    color: #24292E;
+    cursor: pointer;
+    display: block;
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    padding: 6px 16px;
+    position: relative;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    word-wrap: break-word;
+}

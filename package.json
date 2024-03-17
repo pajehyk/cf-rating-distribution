@@ -9,11 +9,13 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "d3": "^7.9.0",
+    "plotly.js": "^2.30.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-plotly.js": "^2.6.0",
     "react-scripts": "^5.0.0"
   },
-  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -25,5 +27,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/react": "^18.2.66"
   }
 }
