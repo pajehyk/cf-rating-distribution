@@ -2,10 +2,6 @@ README.md
 build.gradle
 docs/User.md
 docs/UserApi.md
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
-gradlew
-gradlew.bat
 settings.gradle
 src/main/kotlin/org/openapitools/client/apis/UserApi.kt
 src/main/kotlin/org/openapitools/client/infrastructure/ApiAbstractions.kt
