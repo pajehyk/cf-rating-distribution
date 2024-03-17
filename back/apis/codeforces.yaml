@@ -1,0 +1,61 @@
+openapi: 3.0.0
+servers:
+  - url: 'https://codeforces.com/api'
+info:
+  description: >-
+    Codeforces API.
+  version: 1.0.0
+  title: OpenAPI Codeforces
+  license:
+    name: Apache-2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: user
+    description: User API
+paths:
+  /user.ratedList:
+    get:
+      tags:
+        - user
+      summary: Get users information
+      description: ''
+      parameters:
+        - name: 'activeOnly'
+          in: 'query'
+          description: Boolean. If true then only users, who participated in rated contest 
+            during the last month are returned.
+            Otherwise, all users with at least one rated contest are returned.
+          schema:
+            type: boolean
+        - name: 'includeRetired'
+          in: 'query'
+          description: Boolean. If true, the method returns all rated users, otherwise the method 
+            returns only users, that were online at last month.
+          schema:
+            type: boolean
+        - name: 'contestId'
+          in: 'query'
+          description: Id of the contest. It is not the round number. 
+            It can be seen in contest URL. For example /contest/566/status
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - handle
+        - rating
+      properties:
+        handle:
+          type: string
+        rating:
+          type: integer
