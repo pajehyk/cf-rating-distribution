@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a id="userRatedListGet"></a>
 # **userRatedListGet**
-> UserRatedListResponse userRatedListGet(activeOnly, includeRetired, contestId)
+> UserRatedListResponse userRatedListGet(contentType, activeOnly, includeRetired, contestId)
 
 Get users information
 
@@ -22,11 +22,12 @@ Get users information
 //import org.openapitools.client.models.*
 
 val apiInstance = UserApi()
+val contentType : kotlin.String = contentType_example // kotlin.String | 
 val activeOnly : kotlin.Boolean = true // kotlin.Boolean | Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned.
 val includeRetired : kotlin.Boolean = true // kotlin.Boolean | Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month.
 val contestId : kotlin.Int = 56 // kotlin.Int | Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status
 try {
-    val result : UserRatedListResponse = apiInstance.userRatedListGet(activeOnly, includeRetired, contestId)
+    val result : UserRatedListResponse = apiInstance.userRatedListGet(contentType, activeOnly, includeRetired, contestId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UserApi#userRatedListGet")
@@ -41,6 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **contentType** | **kotlin.String**|  | [optional]
  **activeOnly** | **kotlin.Boolean**| Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. | [optional]
  **includeRetired** | **kotlin.Boolean**| Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. | [optional]
  **contestId** | **kotlin.Int**| Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status | [optional]

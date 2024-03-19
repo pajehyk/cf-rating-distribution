@@ -20,6 +20,10 @@ paths:
       summary: Get users information
       description: ''
       parameters:
+        - name: 'Content-Type'
+          in: 'header'
+          schema:
+            type: string
         - name: 'activeOnly'
           in: 'query'
           description: Boolean. If true then only users, who participated in rated contest 

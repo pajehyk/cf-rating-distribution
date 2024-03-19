@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 README.md
 build.gradle
 docs/User.md
@@ -24,3 +25,6 @@ src/main/kotlin/org/openapitools/client/infrastructure/URIAdapter.kt
 src/main/kotlin/org/openapitools/client/infrastructure/UUIDAdapter.kt
 src/main/kotlin/org/openapitools/client/models/User.kt
 src/main/kotlin/org/openapitools/client/models/UserRatedListResponse.kt
+src/test/kotlin/org/openapitools/client/apis/UserApiTest.kt
+src/test/kotlin/org/openapitools/client/models/UserRatedListResponseTest.kt
+src/test/kotlin/org/openapitools/client/models/UserTest.kt

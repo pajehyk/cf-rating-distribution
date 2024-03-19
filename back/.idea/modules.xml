@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-rating-distribution.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-rating-distribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apis/cf-rating-distribution.apis.iml" filepath="$PROJECT_DIR$/.idea/modules/apis/cf-rating-distribution.apis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libraries/cf-rating-distribution.libraries.iml" filepath="$PROJECT_DIR$/.idea/modules/libraries/cf-rating-distribution.libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.iml" filepath="$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.test.iml" filepath="$PROJECT_DIR$/.idea/modules/libraries/codeforces-client/cf-rating-distribution.libraries.codeforces-client.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-rating-distribution.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-rating-distribution.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/cf-rating-distribution.services.iml" filepath="$PROJECT_DIR$/.idea/modules/services/cf-rating-distribution.services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.iml" filepath="$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/services/cf-rating-service/cf-rating-distribution.services.cf-rating-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cf-rating-distribution.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cf-rating-distribution.test.iml" />
+    </modules>
+  </component>
+</project>

@@ -48,6 +48,7 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
     /**
      * Get users information
      * 
+     * @param contentType  (optional)
      * @param activeOnly Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. (optional)
      * @param includeRetired Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. (optional)
      * @param contestId Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status (optional)
@@ -60,8 +61,8 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun userRatedListGet(activeOnly: kotlin.Boolean? = null, includeRetired: kotlin.Boolean? = null, contestId: kotlin.Int? = null) : UserRatedListResponse {
-        val localVarResponse = userRatedListGetWithHttpInfo(activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
+    fun userRatedListGet(contentType: kotlin.String? = null, activeOnly: kotlin.Boolean? = null, includeRetired: kotlin.Boolean? = null, contestId: kotlin.Int? = null) : UserRatedListResponse {
+        val localVarResponse = userRatedListGetWithHttpInfo(contentType = contentType, activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as UserRatedListResponse
@@ -81,6 +82,7 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
     /**
      * Get users information
      * 
+     * @param contentType  (optional)
      * @param activeOnly Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. (optional)
      * @param includeRetired Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. (optional)
      * @param contestId Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status (optional)
@@ -90,8 +92,8 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun userRatedListGetWithHttpInfo(activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : ApiResponse<UserRatedListResponse?> {
-        val localVariableConfig = userRatedListGetRequestConfig(activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
+    fun userRatedListGetWithHttpInfo(contentType: kotlin.String?, activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : ApiResponse<UserRatedListResponse?> {
+        val localVariableConfig = userRatedListGetRequestConfig(contentType = contentType, activeOnly = activeOnly, includeRetired = includeRetired, contestId = contestId)
 
         return request<Unit, UserRatedListResponse>(
             localVariableConfig
@@ -101,12 +103,13 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
     /**
      * To obtain the request config of the operation userRatedListGet
      *
+     * @param contentType  (optional)
      * @param activeOnly Boolean. If true then only users, who participated in rated contest during the last month are returned. Otherwise, all users with at least one rated contest are returned. (optional)
      * @param includeRetired Boolean. If true, the method returns all rated users, otherwise the method returns only users, that were online at last month. (optional)
      * @param contestId Id of the contest. It is not the round number. It can be seen in contest URL. For example /contest/566/status (optional)
      * @return RequestConfig
      */
-    fun userRatedListGetRequestConfig(activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : RequestConfig<Unit> {
+    fun userRatedListGetRequestConfig(contentType: kotlin.String?, activeOnly: kotlin.Boolean?, includeRetired: kotlin.Boolean?, contestId: kotlin.Int?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -121,6 +124,7 @@ class UserApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = 
                 }
             }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        contentType?.apply { localVariableHeaders["Content-Type"] = this.toString() }
         localVariableHeaders["Accept"] = "application/json"
 
         return RequestConfig(
