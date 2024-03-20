@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/apis" />
             <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/cf-rating-service-server" />
             <option value="$PROJECT_DIR$/libraries/codeforces-client" />
             <option value="$PROJECT_DIR$/services" />
             <option value="$PROJECT_DIR$/services/cf-rating-service" />

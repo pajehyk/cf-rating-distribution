@@ -1,0 +1,52 @@
+openapi: 3.0.0
+info:
+  description: cf-rating-service API.
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  title: OpenAPI cf-rating-service
+  version: 1.0.0
+servers:
+- url: /
+tags:
+- description: User API
+  name: user
+paths:
+  /ratings:
+    get:
+      description: ""
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RatingsResponse'
+          description: successful operation
+      summary: Get users rating
+      tags:
+      - rating
+      x-accepts: application/json
+      x-tags:
+      - tag: rating
+components:
+  schemas:
+    RatingsResponse:
+      example:
+        ratings:
+        - value: 0
+        - value: 0
+      properties:
+        ratings:
+          items:
+            $ref: '#/components/schemas/Rating'
+          type: array
+      type: object
+    Rating:
+      example:
+        value: 0
+      properties:
+        value:
+          type: integer
+      required:
+      - value
+      type: object

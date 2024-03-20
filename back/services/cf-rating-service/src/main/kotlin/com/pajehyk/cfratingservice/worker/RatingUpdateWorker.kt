@@ -2,6 +2,7 @@ package com.pajehyk.cfratingservice.worker
 
 import com.pajehyk.cfratingservice.client.CodeforcesClient
 import com.pajehyk.cfratingservice.persistence.mongodb.UserRepository
+import com.pajehyk.cfratingservice.service.UserListService
 import kotlinx.coroutines.runBlocking
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component
 class RatingUpdateWorker(
     private val codeforcesClient: CodeforcesClient,
     private val userRepository: UserRepository,
+    private val userListService: UserListService,
 ) {
 
     @Scheduled(fixedRate = 5000)
@@ -18,6 +20,7 @@ class RatingUpdateWorker(
             codeforcesClient.getUserList()
         }
         userRepository.save(userList)
+        userListService.updateUserList(userList)
     }
 
 

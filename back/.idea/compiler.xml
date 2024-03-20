@@ -8,6 +8,9 @@
       <module name="cf-rating-service" target="21" />
       <module name="cf-rating-service.main" target="21" />
       <module name="cf-rating-service.test" target="21" />
+      <module name="openapi-spring" target="1.8" />
+      <module name="openapi-spring.main" target="1.8" />
+      <module name="openapi-spring.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
