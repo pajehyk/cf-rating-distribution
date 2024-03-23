@@ -18,6 +18,7 @@ class CodeforcesClient(
         val userList = userApi
                 .userRatedListGet("application/json", null, null, null)
 
+        logger.info { "Successfully received response with ${userList.result?.size} users" }
         return UserList.fromDto(userList, clock.instant())
     }
 

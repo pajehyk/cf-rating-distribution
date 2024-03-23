@@ -14,7 +14,7 @@ class RatingUpdateWorker(
     private val userListService: UserListService,
 ) {
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = RATING_UPDATE_RATE)
     fun updateCfRatings() {
         val userList = runBlocking {
             codeforcesClient.getUserList()

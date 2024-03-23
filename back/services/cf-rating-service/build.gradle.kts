@@ -33,6 +33,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("jakarta.validation:jakarta.validation-api:3.1.0-M1")
     implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+    implementation("org.springframework.cloud:spring-cloud-starter-config:4.1.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-testcontainers")
     testImplementation("org.testcontainers:junit-jupiter")

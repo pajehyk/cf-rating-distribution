@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/libraries/codeforces-client" />
             <option value="$PROJECT_DIR$/services" />
             <option value="$PROJECT_DIR$/services/cf-rating-service" />
+            <option value="$PROJECT_DIR$/services/config-service" />
           </set>
         </option>
       </GradleProjectSettings>
