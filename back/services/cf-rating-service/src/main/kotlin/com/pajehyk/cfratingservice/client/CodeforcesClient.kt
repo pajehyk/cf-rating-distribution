@@ -16,7 +16,7 @@ class CodeforcesClient(
     suspend fun getUserList(): UserList {
         logger.info { "Trying to get rated user list from codeforces" }
         val userList = userApi
-                .userRatedListGet("application/json", null, null, null)
+                .userRatedListGet("application/json", activeOnly = true, includeRetired = false, contestId = null)
 
         logger.info { "Successfully received response with ${userList.result?.size} users" }
         return UserList.fromDto(userList, clock.instant())
