@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-service-deployment
+  labels:
+    app: config-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: config-service
+  template:
+    metadata:
+      labels:
+        app: config-service
+    spec:
+      containers:
+        - name: app
+          image: pajehyk/config-service:0.0.1
+          ports:
+            - containerPort: 80

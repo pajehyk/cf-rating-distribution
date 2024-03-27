@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cf-rating-service-deployment
+  labels:
+    app: cf-rating-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cf-rating-service
+  template:
+    metadata:
+      labels:
+        app: cf-rating-service
+    spec:
+      containers:
+        - name: app
+          image: pajehyk/cf-rating-service:0.0.1
+          ports:
+            - containerPort: 80
+          env:
+            - name: VAULT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: vault-token
+                  key: vault-token
