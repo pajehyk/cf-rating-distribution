@@ -35,6 +35,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Rating'
+        date_updated:
+          type: string
+          format: date-time
     Rating:
       type: object
       required:

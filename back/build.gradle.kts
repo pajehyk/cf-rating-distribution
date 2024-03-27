@@ -17,7 +17,7 @@ openApiGenerate {
     inputSpec = "$rootDir/apis/cf-rating-service.yaml"
     outputDir = "$rootDir/libraries/cf-rating-service-server"
     apiPackage = "com.pajehyk.generated.server.api"
-    templateDir = "$rootDir/spring-template"
+    //templateDir = "$rootDir/spring-template"
     modelPackage = "com.pajehyk.generated.server.model"
     invokerPackage = "com.pajehyk.generated.invoker"
     configOptions = buildMap {

@@ -8,6 +8,8 @@ import mu.KLogger
 import org.springframework.http.HttpHeaders
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
+import java.time.OffsetDateTime
+import java.time.ZoneId
 
 @RestController
 class UserListController(
@@ -17,8 +19,10 @@ class UserListController(
 
     override fun ratingsGet(): ResponseEntity<RatingsResponse> {
         logger.info { "Received /ratings request" }
-        val abc = userListService.recentUserList()
-        val ratingResponse = RatingsResponse().ratings(abc.userList.map { Rating().value(it.rating) })
+        val userList = userListService.recentUserList()
+        val ratingResponse = RatingsResponse()
+            .ratings(userList.userList.map { Rating().value(it.rating) })
+            .dateUpdated(OffsetDateTime.ofInstant(userList.fetchedAt, ZoneId.of("Europe/Moscow")))
         val headers = HttpHeaders()
         headers.accessControlAllowOrigin = "*"
         val response = ResponseEntity.ok().headers(headers).body(ratingResponse)

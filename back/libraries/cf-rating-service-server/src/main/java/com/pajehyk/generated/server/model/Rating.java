@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * Rating
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-20T15:24:56.187136+03:00[Europe/Moscow]", comments = "Generator version: 7.2.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-27T16:46:53.787980661+03:00[Europe/Moscow]")
 public class Rating {
 
   private Integer value;

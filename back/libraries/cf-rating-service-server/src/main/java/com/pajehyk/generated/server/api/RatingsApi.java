@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-20T15:24:56.187136+03:00[Europe/Moscow]", comments = "Generator version: 7.2.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-03-27T16:46:53.787980661+03:00[Europe/Moscow]")
 @Validated
 @Tag(name = "rating", description = "the rating API")
 public interface RatingsApi {
@@ -70,7 +70,7 @@ public interface RatingsApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "{ \"ratings\" : [ { \"value\" : 0 }, { \"value\" : 0 } ] }";
+                    String exampleString = "{ \"date_updated\" : \"2000-01-23T04:56:07.000+00:00\", \"ratings\" : [ { \"value\" : 0 }, { \"value\" : 0 } ] }";
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: pajehyk/cf-rating-service:0.0.1
+          image: pajehyk/cf-rating-service:0.0.3
           ports:
             - containerPort: 80
           env:
