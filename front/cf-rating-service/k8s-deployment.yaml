@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cf-rating-service-front-deployment
+  labels:
+    app: cf-rating-service-front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cf-rating-service-front
+  template:
+    metadata:
+      labels:
+        app: cf-rating-service-front
+    spec:
+      containers:
+        - name: app
+          image: pajehyk/cf-rating-service-front:0.0.2
+          ports:
+            - containerPort: 3000
